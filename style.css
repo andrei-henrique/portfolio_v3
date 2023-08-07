@@ -4,12 +4,12 @@
 :root {
     --header: linear-gradient(to right, rgba(19, 19, 19, 0.8), rgb(26, 25, 25));
     --letra: #f0ffff;
-    --dez: #60ff04;
+    --dez: #c92525;
     --outher: rgba(0, 0, 0, 0.05);
     --background-section-one: #111;
 }
 
-/*c92525;*/
+
 
 
 *{
@@ -31,7 +31,7 @@ body{
 body, ul {
     margin: 0 auto;
     padding: 0px;
-    max-width: 1400px;
+    max-width: 1200px;
 }
 
 a{
@@ -335,10 +335,12 @@ main {
     .section-div img{
         grid-column: 1/-1;
         justify-content: center;
+        
     }
 
-    .section div {
-        grid-column: 1/-1;
+
+    .content-main{
+        grid-column: -1/1;
         justify-content: center;
     }
 
@@ -349,6 +351,12 @@ main {
     .section-div div p{
         font-weight: calc(200 - .5rem);
     }
+
+    .section-div div a{
+        padding: 5px 15px;
+    }
+
+
 
 }
 

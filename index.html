@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css"
+        integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="shortcut icon" href="livro.png" type="image/x-icon">
+
+
+    <title>Andrei Santos</title>
+</head>
+<body>
+    <header id="header">
+        <a id="logo" href="#cabecalho">Andrei <span>Santos</span></a>
+        
+        <nav id="nav">
+            <button id="btn-mobile">Menu 
+                <span id="hamburguer"></span>
+            </button>
+            <ul id="menu">
+                <li id="inicio"><a href="#cabecalho">Inicio</a></li>
+                <li><a href="#secao-sobremim">Sobre</a></li>
+                <li><a href="#secao-projetos">Projetos</a></li>
+                <li id="github"><a href="https://github.com/andrei-henrique" target="_blank"><i class="fa-brands fa-github"></i></a></li>
+                <li id="linkedin"><a href="https://www.linkedin.com/in/andreihenriqueas/" target="_blank"><i class="fa-brands fa-linkedin"></i></a></li>
+                
+            </ul>
+        </nav>
+        <script src="script.js"></script>
+
+    </header>
+    <section aria-label="secção curriculo download Andrei" class="section-div" id="cabecalho">
+        <div>
+            <h2>Ola!👋 Sou Andrei Santos</h2>
+            <h2 class="digitando">Front-end Developer</h2>
+            <p id="textcopy" >Clique no Botão para copiar o email:</p>
+            <a href="javascript:void(0);" id="btnemail" onclick="copyEmail()">andrei.henriquepro@gmail.com</a>
+            
+            
+        </div>
+        <img src="programador.png" alt="">
+        
+    </section>
+    <main>
+        <section class="service" aria-label="secção sobre mim" id="secao-sobremim">
+            <div class="sobre_titulo">
+            <h1>Sobre Mim</h1>
+            <p>Perfil profissional</p>
+            <div>
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+
+        <div class="my_services">
+            <ul>
+                <li>
+                    <i class="fa-solid fa-user"></i>
+                    <h3>Apresentação Pessoal</h3>
+                    <p>Olá! Sou Andrei Santos, Tenho 21 anos e moro em Salvador - BA. Gosto muito de tecnologia e criação de soluções inovadoras..</p>
+                </li>
+                <li>
+                    <i class="fa-solid fa-building-columns"></i>
+                    <h3>Formação Acadêmica</h3>
+                    <p>Faço ciência da computação na UNIFACS, Estou me especializando em desenvolvimento web desde abril de 2023.</p>
+                </li>
+                <li>
+                    <i class="fa-solid fa-briefcase"></i>
+                    <h3>Experiência Profissional</h3>
+                    <p> 
+                        Em agosto de 2023, utilizei o Adobe Photoshop para editar e aprimorar fotos com melhorias de qualidade, ajustes de cores e retoques.</p>
+                </li>
+                <li>
+                    <i class="fa-solid fa-check-to-slot"></i>
+                    <h3>Qualidades para a área</h3>
+                    <p> Criativo e inovador no design e resolução de problemas.
+                        Autodidata e Organizado e focado em projetos e prazos.</p>
+                </li>
+                <li>
+                    <i class="fa-solid fa-screwdriver-wrench"></i>
+                    <h3>Habilidades e Ferramentas</h3>
+                    <p>Linguagens de Programação: JavaScript, HTML, CSS, Python. Ferramentas: Git, VS Code, Figma</p>
+                </li>
+                <li>
+                    <i class="fa-sharp fa-solid fa-palette"></i>
+                    <h3>Qualidades em UX Design</h3>
+                    <p> Empático e centrado no usuário.
+                        Criativo em soluções intuitivas.
+                        Analítico na avaliação de experiências.</p>
+                </li>
+            </ul>
+        </div>
+        </section>
+    </main>
+
+    <div class="my_resume" id="secao-projetos">
+        <div class="sobre_titulo">
+            <h1>Projetos</h1>
+            <p>Projetos Práticos</p>
+            <div>
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+
+        <div class="my_projects">
+
+            <div class="card">
+                <div class="imagem">
+                    <img class="imgcard" src="17470.png" alt="">
+                </div>
+                <div class="text_card">
+                    <h2 class="text_main">Projeto 1</h2>
+                    <p class="desc">Lorem ipsum dolor sit amet consectetur adipisicing elit. Aspernatur, dolores.</p>
+                    <p class="descskill">Html, Css, Javascript</p>
+                </div>
+                <div class="buttoncard">
+                    <button class="btncard">Visualizar <i class="fa-solid fa-eye"></i></button>
+                    <button class="btncard">Código <i class="fa-solid fa-code"></i></button>
+                </div>
+            </div>
+
+
+            <div class="card">
+                <div class="imagem">
+                    <img class="imgcard" src="17470.png" alt="">
+                </div>
+                <div class="text_card">
+                    <h2 class="text_main">Projeto 2</h2>
+                    <p class="desc">Lorem ipsum dolor sit amet consectetur adipisicing elit. Aspernatur, dolores.</p>
+                    <p class="descskill">Html, Css, Javascript</p>
+                </div>
+                <div class="buttoncard">
+                    <button class="btncard">Visualizar <i class="fa-solid fa-eye"></i></button>
+                    <button class="btncard">Código <i class="fa-solid fa-code"></i></button>
+                </div>
+            </div>
+
+
+            <div class="card">
+                <div class="imagem">
+                    <img class="imgcard" src="17470.png" alt="">
+                </div>
+                <div class="text_card">
+                    <h2 class="text_main">Projeto 3</h2>
+                    <p class="desc">Lorem ipsum dolor sit amet consectetur adipisicing elit. Aspernatur, dolores.</p>
+                    <p class="descskill">Html, Css, Javascript</p>
+                </div>
+                <div class="buttoncard">
+                    <button class="btncard">Visualizar <i class="fa-solid fa-eye"></i></button>
+                    <button class="btncard">Código <i class="fa-solid fa-code"></i></button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <section class="footer"> 
+        <footer>
+            <p>© 2023    <a href="https://github.com/andrei-henrique" target="_blank">Andrei Santos</a></p>
+        </footer>
+        
+    </section>
+        <script src="script.js">''</script>
+
+
+
+</body>
+</html>

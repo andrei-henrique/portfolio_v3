@@ -4,10 +4,12 @@
 :root {
     --header: linear-gradient(to right, rgba(19, 19, 19, 0.8), rgb(26, 25, 25));
     --letra: #f0ffff;
-    --dez: #c92525;
+    --dez: #60ff04;
     --outher: rgba(0, 0, 0, 0.05);
     --background-section-one: #111;
 }
+
+/*c92525;*/
 
 
 *{
@@ -109,7 +111,7 @@ color: var(--dez);
     display: none;
 }
 
-@media (max-width: 600px){
+@media (max-width: 800px){
 
     #menu {
         display: block;
@@ -330,18 +332,27 @@ main {
 
 @media (max-width: 992px){
 
-    .section-div{
-    display: flex;
-    flex-direction: column;
+    .section-div img{
+        grid-column: 1/-1;
+        justify-content: center;
+    }
+
+    .section div {
+        grid-column: 1/-1;
+        justify-content: center;
+    }
+
+    .section-div div h2{
+        font-size: 2.0rem;
+    }
+    
+    .section-div div p{
+        font-weight: calc(200 - .5rem);
     }
 
 }
 
-.service {
-    margin-top: -30px;
-    padding: 60px;
-    background-color: #151515;
-}
+
 
 .my_services {
     padding: 60px;

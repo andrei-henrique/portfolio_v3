@@ -1,522 +1,171 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,200;0,300;1,400&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Berkshire+Swash&display=swap');
-
-:root {
-    --header: linear-gradient(to right, rgba(19, 19, 19, 0.8), rgb(26, 25, 25));
-    --letra: #f0ffff;
-    --dez: #c92525;
-    --outher: rgba(0, 0, 0, 0.05);
-    --background-section-one: #111;
-}
-
-
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css"
+        integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="shortcut icon" href="livro.png" type="image/x-icon">
 
 
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    list-style: none;
-    text-decoration: none;
-}
-
-html {
-    scroll-behavior: smooth;
-}
-
-body{
-    background-color:  #1b1b1b;
-}
-
-body, ul {
-    margin: 0 auto;
-    padding: 0px;
-    max-width: 1200px;
-}
-
-a{
-    color: var(--letra);
-    text-decoration: none;
-    font-family: 'Poppins';
-}
-
-#logo {
-    font-size: 1.5rem;
-    font-weight: bold;
-}
-
-#logo {
-font-family: 'Berkshire Swash', cursive;
-color: var(--dez);
-}
-
-#logo span{
-    font-family: 'Poppins';
-    color: var(--letra);
-    }
-
-#header {
-    box-sizing: border-box;
-    height: 70px;
-    padding: 1rem;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;    
-    background-image: var(--header);
-    position: fixed; 
-    top: 0;
-    left: 0;
-    right: 0;
-    z-index: 999;
-}
-
-
-#menu {
-    display: flex;
-    list-style: none;
-    gap: 5rem;
-    text-align: center;
-}
-
-#inicio a{
-    color: var(--dez);
-}
-
-#menu a{
-    display: block;
-    padding: .5rem;
-    position: relative;
-    font-weight: 500;
-}
-
-
-
-#menu a::after{
-    content: " ";
-    width: 0%;
-    height: 4px;
-    background-color: var(--dez);
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    transition: 0.5s ease-in-out;
-}
-
-#menu a:hover::after{
-    width: 100%;
-}
-
-#btn-mobile {
-    color: var(--dez);
-    display: none;
-}
-
-@media (max-width: 800px){
-
-    #menu {
-        display: block;
-        position: absolute;
-        width: 100%;
-        top: 70px;
-        right: 0px;
-        background: var(--header);
-        transition: 0.6s;
-        z-index: 1000;
-        height: 0px;
-        visibility: hidden;
-        overflow-y: hidden;
+    <title>Andrei Henrique</title>
+</head>
+<body>
+    <header id="header">
+        <a id="logo" href="#cabecalho">Andrei <span>Henrique</span></a>
         
-    }
+        <nav id="nav">
+            <button id="btn-mobile">Menu 
+                <span id="hamburguer"></span>
+            </button>
+            <ul id="menu">
+                <li id="inicio"><a href="#cabecalho">Inicio</a></li>
+                <li><a href="#secao-sobremim">Sobre</a></li>
+                <li><a href="#secao-projetos">Projetos</a></li>
+                <li id="github"><a href="https://github.com/andrei-henrique" target="_blank"><i class="fa-brands fa-github"></i></a></li>
+                <li id="linkedin"><a href="https://www.linkedin.com/in/andreihenriqueas/" target="_blank"><i class="fa-brands fa-linkedin"></i></a></li>
+                
+            </ul>
+        </nav>
+        <script src="script.js"></script>
 
-    #nav.active #menu {
-        height: calc(100vh - 70px);
-        visibility: visible;
-        overflow-y: auto;
-    }
-
-    #menu a{
-        padding: 1rem 0;
-        margin: 0 1rem;
-        border-bottom: 2px solid var(--outher);
-    }
-
-    #menu a::after{
-        transition: 0.9s ease-in-out;
-    }
-
-    
-    
-
-    #btn-mobile {
-        display: flex;
-        padding: .5rem 1rem;
-        font-size: 1rem;
-        border: none;
-        background: none;
-        cursor: pointer;
-        gap: .5rem;
-    }
-
-    #hamburguer {
-        color: var(--dez);
-        border-top: 2px solid;
-        width: 20px;
+    </header>
+    <section aria-label="secção curriculo download Andrei" class="section-div" id="cabecalho">
+        <div>
+            <h2>Olá!👋 Sou Andrei Henrique</h2>
+            <h2 class="digitando">Front-end Developer</h2>
+            <p id="textcopy" >Clique no Botão para copiar o email:</p>
+            <a href="javascript:void(0);" id="btnemail" onclick="copyEmail()">andrei.henriquepro@gmail.com</a>
+            
+        </div>
+        <img src="programador.png" alt="">
         
+    </section>
+    <main>
+        <section class="service" aria-label="secção sobre mim" id="secao-sobremim">
+            <div class="sobre_titulo">
+            <h1>Sobre Mim</h1>
+            <p>Perfil profissional</p>
+            <div>
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+
+        <div class="my_services">
+            <ul>
+                <li>
+                    <i class="fa-solid fa-user"></i>
+                    <h3>Apresentação Pessoal</h3>
+                    <p>Olá! Sou Andrei Henrique, Tenho 21 anos e moro em Salvador - BA. Gosto muito de tecnologia e criação de soluções inovadoras..</p>
+                </li>
+                <li>
+                    <i class="fa-solid fa-building-columns"></i>
+                    <h3>Formação Acadêmica</h3>
+                    <p>Faço ciência da computação na UNIFACS, Estou me especializando em desenvolvimento web desde abril de 2023.</p>
+                </li>
+                <li>
+                    <i class="fa-solid fa-briefcase"></i>
+                    <h3>Experiência Profissional</h3>
+                    <p> 
+                        Em agosto de 2023, utilizei o Adobe Photoshop para editar e aprimorar fotos com melhorias de qualidade, ajustes de cores e retoques.</p>
+                </li>
+                <li>
+                    <i class="fa-solid fa-check-to-slot"></i>
+                    <h3>Qualidades para a área</h3>
+                    <p> Criativo e inovador no design e resolução de problemas.
+                        Autodidata e Organizado e focado em projetos e prazos.</p>
+                </li>
+                <li>
+                    <i class="fa-solid fa-screwdriver-wrench"></i>
+                    <h3>Habilidades e Ferramentas</h3>
+                    <p>Linguagens de Programação: JavaScript, HTML, CSS, Python. Ferramentas: Git, VS Code, Figma</p>
+                </li>
+                <li>
+                    <i class="fa-sharp fa-solid fa-palette"></i>
+                    <h3>Qualidades em UX Design</h3>
+                    <p> Empático e centrado no usuário.
+                        Criativo em soluções intuitivas.
+                        Analítico na avaliação de experiências.</p>
+                </li>
+            </ul>
+        </div>
+        </section>
+    </main>
+
+    <div class="my_resume" id="secao-projetos">
+        <div class="sobre_titulo">
+            <h1>Projetos</h1>
+            <p>Projetos Práticos</p>
+            <div>
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+
+        <div class="my_projects">
+
+            <div class="card">
+                <div class="imagem">
+                    <img class="imgcard" src="17470.png" alt="">
+                </div>
+                <div class="text_card">
+                    <h2 class="text_main">Projeto 1</h2>
+                    <p class="desc">Lorem ipsum dolor sit amet consectetur adipisicing elit. Aspernatur, dolores.</p>
+                    <p class="descskill">Html, Css, Javascript</p>
+                </div>
+                <div class="buttoncard">
+                    <button class="btncard">Visualizar <i class="fa-solid fa-eye"></i></button>
+                    <button class="btncard">Código <i class="fa-solid fa-code"></i></button>
+                </div>
+            </div>
+
+
+            <div class="card">
+                <div class="imagem">
+                    <img class="imgcard" src="17470.png" alt="">
+                </div>
+                <div class="text_card">
+                    <h2 class="text_main">Projeto 2</h2>
+                    <p class="desc">Lorem ipsum dolor sit amet consectetur adipisicing elit. Aspernatur, dolores.</p>
+                    <p class="descskill">Html, Css, Javascript</p>
+                </div>
+                <div class="buttoncard">
+                    <button class="btncard">Visualizar <i class="fa-solid fa-eye"></i></button>
+                    <button class="btncard">Código <i class="fa-solid fa-code"></i></button>
+                </div>
+            </div>
+
+
+            <div class="card">
+                <div class="imagem">
+                    <img class="imgcard" src="17470.png" alt="">
+                </div>
+                <div class="text_card">
+                    <h2 class="text_main">Projeto 3</h2>
+                    <p class="desc">Lorem ipsum dolor sit amet consectetur adipisicing elit. Aspernatur, dolores.</p>
+                    <p class="descskill">Html, Css, Javascript</p>
+                </div>
+                <div class="buttoncard">
+                    <button class="btncard">Visualizar <i class="fa-solid fa-eye"></i></button>
+                    <button class="btncard">Código <i class="fa-solid fa-code"></i></button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <section class="footer"> 
+        <footer>
+            <p>© 2023    <a href="https://github.com/andrei-henrique" target="_blank">Andrei Santos</a></p>
+        </footer>
         
-    }
+    </section>
+        <script src="script.js">''</script>
 
-    #hamburguer::after,#hamburguer::before {
-        content: '';
-        display: block;
-        width: 20px;
-        height: 2px;
-        background: currentColor;
-        margin-top: 5px;
-        transition: .3s;
-        position: relative;
-        
-        
-    }
 
-    nav.active #hamburguer {
-        border-top-color: transparent;
 
-    }
-
-    nav.active #hamburguer::before{
-        transform: rotate(135deg);
-    }
-
-    nav.active #hamburguer::after{
-        transform: rotate(-135deg);
-        top: -7px;
-    }
-
-}
-
-.section-div{
-    animation: inicializar .7s forwards;
-    background-image: var(--background-section-one);
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    justify-content: space-around;
-    align-items: center;
-    gap: 60px;
-    padding: 60px;
-}
-
-.section-div div{
-    margin-top: 120px;
-    align-self: start;
-    display: grid;
-    gap: 10px;
-}
-
-.section-div div h2{
-    font-family: monospace;
-    font-weight: 600;
-    color: var(--letra);
-    font-size: 2.5rem;
-}
-
-.section-div div p{
-    font-family: 'Poppins';
-    font-weight: 200;
-    color: var(--letra);
-}
-
-#textcopy{
-    color: #707070;
-}
-
-
-#btnemail:hover{
-    background: var(--dez);
-    border: 2px solid var(--dez);
-    box-shadow: 0 0 15px var(--dez);
-    color: azure;
-}
-
-.section-div div a{
-    justify-self: start;
-    color: var(--letra);
-    padding: 15px 40px;
-    border-radius: 5px;
-    border: 2px solid var(--dez)
-}
-
-.section-div img{
-    max-width: 100%;
-    animation: float 3s ease-in-out infinite;
-}
-
-@keyframes float{
-    0%, 100% {
-        transform: translateY(0);
-    }
-
-    50%{
-        transform: translateY(-20px);
-    }
-}
-
-.digitando::after {
-    content: '|';
-    margin-left: 0px;
-    opacity: 1;
-    animation: pisca .9s infinite;
-}
-
-@keyframes pisca {
-    0%, 100% {
-      opacity: 1; /* Opacidade total no início e no final */
-    }
-    50% {
-      opacity: 0; /* Opacidade zero no meio da animação */
-    }
-}
-
-
-@keyframes inicializar {
-    from {
-        opacity: 0;
-        
-    }
-
-    to {
-        opacity: 1;
-        
-
-    }
-}
-
-main {
-    background-color: #1b1b1b;
-}
-
-.sobre_titulo{
-    margin: 30px 0;
-    grid-column: 1/-1;
-    text-align: center;
-    color: var(--letra);
-}
-
-.sobre_titulo h1{
-    font-size: 1.8rem;
-    color: var(--dez);
-    margin-bottom: 5px;
-    font-family: 'Poppins';
-}
-
-.sobre_titulo p{
-    font-family: 'Poppins';
-    color: #5f5e5e;
-    font-size: 1.4rem;
-    margin-bottom: 1rem;
-    position: relative;
-}
-
-.sobre_titulo div{
-    display: flex;
-    gap: 10px;
-    justify-content: center;
-}
-
-.sobre_titulo span{
-    display: block;
-    height: 20px;
-    width: 20px;
-    border-radius: 50%;
-    background-color: var(--dez);
-}
-
-@media (max-width: 992px){
-
-    .section-div img{
-        grid-column: 1/-1;
-        justify-content: center;
-        
-    }
-
-
-    .content-main{
-        grid-column: -1/1;
-        justify-content: center;
-    }
-
-    .section-div div h2{
-        font-size: 2.0rem;
-    }
-    
-    .section-div div p{
-        font-weight: calc(200 - .5rem);
-    }
-
-    .section-div div a{
-        padding: 5px 15px;
-    }
-
-
-
-}
-
-
-
-.my_services {
-    padding: 60px;
-    color: var(--letra);
-}
-
-.my_services ul{
-    display: flex;
-    flex-wrap: wrap;
-    gap: 20px;
-    align-items: center;
-    justify-content: center;
-}
-
-.my_services ul li{
-    border-radius: 6px;
-    position: relative;
-    padding: 10px;
-    display: grid;
-    gap: 30px;
-    text-align: center;
-    align-content: center;
-    max-width: 300px;
-    height: 300px;
-    background-color: #222;
-}
-
-.my_services ul li i{
-    font-size: 2.7rem;
-    color: var(--dez);
-}
-
-.my_services ul li h3{
-    color: var(--letra);
-    font-size: 1.6rem;
-    font-family: 'Poppins';
-    font-weight: 500;
-}
-
-.my_resume{
-    margin-top: 60px;
-}
-
-.my_services ul li p{
-    font-size: .8rem;
-    font-family: 'Poppins';
-    color: #919191;
-}
-
-.my_projects{
-    display: flex;
-    flex-wrap: wrap;
-    gap: 30px;
-    align-items: center;
-    justify-content: center;
-    margin-bottom: 80px;
-}
-
-
-.my_projects .card{
-    width: 350px;
-    height: 500px;
-    border-radius: 15px;
-    margin-top: 100px;
-    background-color: #242424;
-    box-shadow: 0 0 15px black;
-}
-
-.my_projects .card{
-    margin-top: 120px;
-    align-self: start;
-    display: grid;
-    gap: 10px;
-}
-
-.text_card{
-    text-align: center;
-    color: var(--letra);
-    font-weight: 600;
-    font: 20px;
-    font-family: 'Poppins';
-    
-}
-
-.imagem{
-    display: flex;
-    justify-content: center;
-}
-
-.imgcard {
-    width: 250px;
-    height: 250px;
-    margin-top: 20px;
-}
-
-.desc {
-    font-family: 'Poppins';
-    color: var(--letra);
-    font-weight: 300;
-    text-align: center;
-    font-size: 15px;
-    text-align: center;
-    margin: 10px;
-}
-
-.descskill {
-    font-family: 'Poppins';
-    color: #6b6b6b;
-    font-weight: 300;
-    text-align: center;
-    font-size: 15px;
-    text-align: center;
-    margin: 10px;
-}
-
-.btncard{
-    padding: 10px 20px;
-    font-family: 'Poppins';
-    font-size: 15px;
-    font-weight: 500;
-    border-radius: 10px;
-    border: none;
-    background-color: var(--dez);
-    border: 1px solid var(--dez);
-    color: #f0ffff;
-    cursor: not-allowed;
-}
-
-.btncard:hover{
-    transition: .8s;
-    background-color: #111;
-    color: #f0ffff;
-}
-
-
-.buttoncard {
-    display: flex;
-    justify-content: center;
-    margin-top: 30px;
-    margin: 20px;
-    gap: 20px;
-}
-
-footer {
-    background-color: #161616;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    max-width: 1400px;
-}
-
-.footer p{
-    color: #5f5e5e;
-}
-
-
-
-
-
+</body>
+</html>
